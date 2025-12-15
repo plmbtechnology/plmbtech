@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - PLMB Technologie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .form-input:focus {
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+   <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <i class="fas fa-laptop-code text-blue-600 text-2xl mr-2"></i>
+                    <span class="font-bold text-xl text-gray-800">PLMB Technologie</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Accueil</a>
+                <a href="apropos.html" class="text-blue-600 font-medium border-b-2 border-blue-600 px-1">À propos</a>
+                <a href="services.html" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Services</a>
+                <a href="projects.html" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Projets</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Contact</a>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden pb-4 transition-all duration-300 ease-in-out">
+        <div class="space-y-1 px-2 pt-2 pb-3">
+            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-600">Accueil</a>
+            <a href="apropos.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-600">À propos</a>
+            <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-600">Services</a>
+            <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-600">Projets</a>
+            <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-blue-50">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.getElementById('menu-button').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+    <!-- Hero Section Contact -->
+    <section class="hero-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Contactez-nous</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                Prêt à transformer votre entreprise ? Discutons de votre projet et découvrez comment nous pouvons vous aider à atteindre vos objectifs.
+            </p>
+        </div>
+    </section>
+
+    <!-- Informations de contact -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Restons en contact</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Plusieurs façons de nous contacter. Choisissez celle qui vous convient le mieux.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Téléphone -->
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center card-hover border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-phone text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Appelez-nous</h3>
+                    <p class="text-gray-600 mb-4">
+                        Discutons de votre projet par téléphone
+                    </p>
+                    <a href="tel:+33123456789" class="text-blue-600 font-semibold text-lg hover:text-blue-700 transition duration-300">
+                        +243 827 612 274
+                    </a>
+                    <p class="text-gray-500 text-sm mt-2">Lun-Ven: 9h-18h</p>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center card-hover border border-gray-100">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-envelope text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Envoyez un email</h3>
+                    <p class="text-gray-600 mb-4">
+                        Nous répondons sous 24 heures
+                    </p>
+                    <a href="mailto:contact@plmb-technologie.fr" class="text-blue-600 font-semibold text-lg hover:text-blue-700 transition duration-300">
+                        plmbtechnology@gmail.com
+                    </a>
+                    <p class="text-gray-500 text-sm mt-2">Support technique disponible</p>
+                </div>
+
+                <!-- Adresse -->
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center card-hover border border-gray-100">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Rendez-nous visite</h3>
+                    <p class="text-gray-600 mb-4">
+                        Rencontrons-nous dans nos bureaux
+                    </p>
+                    <address class="text-blue-600 font-semibold text-lg not-italic">
+                        A l'INPP <br>
+                        En diagonale de la chaîne Canal-Orient
+                    </address>
+                    <p class="text-gray-500 text-sm mt-2">Sur rendez-vous</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulaire de contact et carte -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Formulaire de contact -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Envoyez-nous un message</h2>
+                    <p class="text-gray-600 mb-8">
+                        Remplissez le formulaire ci-dessous et nous vous recontacterons dans les plus brefs délais.
+                    </p>
+
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="prenom" class="block text-sm font-medium text-gray-700 mb-2">Prénom *</label>
+                                <input type="text" id="prenom" name="prenom" required 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+                            </div>
+                            <div>
+                                <label for="nom" class="block text-sm font-medium text-gray-700 mb-2">Nom *</label>
+                                <input type="text" id="nom" name="nom" required 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                <input type="email" id="email" name="email" required 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+                            </div>
+                            <div>
+                                <label for="telephone" class="block text-sm font-medium text-gray-700 mb-2">Téléphone</label>
+                                <input type="tel" id="telephone" name="telephone" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="entreprise" class="block text-sm font-medium text-gray-700 mb-2">Entreprise</label>
+                            <input type="text" id="entreprise" name="entreprise" 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+                        </div>
+
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service concerné</label>
+                            <select id="service" name="service" 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+                                <option value="">Sélectionnez un service</option>
+                                <option value="developpement-web">Développement Web</option>
+                                <option value="applications-mobiles">Applications Mobiles</option>
+                                <option value="solutions-cloud">Solutions Cloud</option>
+                                <option value="cybersecurite">Cybersécurité</option>
+                                <option value="transformation-digitale">Transformation Digitale</option>
+                                <option value="support-maintenance">Support & Maintenance</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="budget" class="block text-sm font-medium text-gray-700 mb-2">Budget estimé</label>
+                            <select id="budget" name="budget" 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+                                <option value="">Sélectionnez une fourchette</option>
+                                <option value="1-5k">1 000 $ - 5 000 $</option>
+                                <option value="5-15k">5 000 $ - 15 000 $</option>
+                                <option value="15-30k">15 000 $ - 30 000 $</option>
+                                <option value="30-50k">30 000 $ - 50 000 $</option>
+                                <option value="50k+">50 000 $ et plus</option>
+                                <option value="non-defini">À définir</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg form-input focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+                                placeholder="Décrivez votre projet, vos besoins et vos objectifs..."></textarea>
+                        </div>
+
+                        <div class="flex items-center">
+                            <input type="checkbox" id="consentement" name="consentement" required 
+                                class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                            <label for="consentement" class="ml-2 text-sm text-gray-600">
+                                J'accepte que mes données soient utilisées pour me recontacter. 
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Politique de confidentialité</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" 
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Carte et informations supplémentaires -->
+                <div class="space-y-8">
+                    <!-- Carte -->
+                    <div class="map-container">
+                        <div class="bg-gradient-to-br from-blue-400 to-blue-600 h-64 rounded-lg flex items-center justify-center text-white">
+                            <div class="text-center">
+                                <i class="fas fa-map-marked-alt text-4xl mb-4"></i>
+                                <h3 class="text-xl font-bold">Kisangani, Republique Démocratique du Congo</h3>
+                                <p class="mt-2"></p>
+                                <p>INPP</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Informations supplémentaires -->
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Informations pratiques</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-clock text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Horaires d'ouverture</h4>
+                                    <p class="text-gray-600">Lundi - Vendredi: 9h00 - 18h00</p>
+                                    <p class="text-gray-600">Samedi: 10h00 - 14h00 (sur rendez-vous)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-subway text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Accès transport</h4>
+                                    <p class="text-gray-600">en diagonale du Bureau de la POSTE</p>
+                                    <p class="text-gray-600">Route de la résidence equateur</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-car text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Bureau de la POSTE</h4>
+                                    <p class="text-gray-600">Parking non disponible</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ rapide -->
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Questions fréquentes</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Quel est le délai de réponse ?</h4>
+                                <p class="text-gray-600 text-sm">Nous répondons à toutes les demandes sous 24 heures ouvrées.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Proposez-vous des consultations gratuites ?</h4>
+                                <p class="text-gray-600 text-sm">Oui, nous offrons une première consultation sans engagement.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Travaillez-vous à l'international ?</h4>
+                                <p class="text-gray-600 text-sm">Absolument ! Nous collaborons avec des clients partout dans le monde.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-blue-600 font-semibold mt-4 hover:text-blue-700 transition duration-300">
+                            Voir toutes les FAQ
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4"><i class="fas fa-handshake text-blue-600 mr-2"></i>L'Équipe Fondatrice (Point de Contact)</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Rencontrez les **Techniciens Web fondateurs** qui seront vos premiers interlocuteurs pour transformer votre vision en réalité.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <div class="bg-gray-50 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition duration-300">
+                <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-crown text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-1">PATOMA Exaucé</h3>
+                <p class="text-blue-600 mb-3">Président & Développeur Mobile/UI-UX</p>
+                <p class="text-gray-600 text-sm mb-4">
+                    Dirige l'équipe technique et se spécialise dans le développement mobile, le design UI/UX et la conception de logos.
+                </p>
+                <div class="flex justify-center space-x-3 mt-4">
+                    <a href="https://www.facebook.com/exauce.patomas" target="_blank" class="text-blue-600 hover:text-blue-700 transition">
+                        <i class="fab fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="https://wa.me/243827612274" target="_blank" class="text-green-500 hover:text-green-600 transition">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                    <a href="mailto:exaucepatoma4@gmail.com" class="text-gray-600 hover:text-blue-600 transition">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                    <a href="#" target="_blank" class="text-blue-700 hover:text-blue-800 transition">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="https://exaudev.github.io/PatPortfolio/" target="_blank" class="text-yellow-600 hover:text-yellow-700 transition">
+                        <i class="fas fa-globe text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition duration-300">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-code text-green-600 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-1">MULENGA Tracy</h3>
+                <p class="text-green-600 mb-3">Vice-Président & Développeur Fullstack</p>
+                <p class="text-gray-600 text-sm mb-4">
+                    Responsable de la stratégie technique globale et expert en développement web Fullstack (Front-end et Back-end).
+                </p>
+                <div class="flex justify-center space-x-3 mt-4">
+                    <a href="https://www.facebook.com/travis.mulenga.581/" target="_blank" class="text-blue-600 hover:text-blue-700 transition">
+                        <i class="fab fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="https://wa.me/243844202387" target="_blank" class="text-green-500 hover:text-green-600 transition">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                    <a href="mailto:travismulenga131@gmail.com" class="text-gray-600 hover:text-blue-600 transition">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/travis-mulenga-b14185295/" target="_blank" class="text-blue-700 hover:text-blue-800 transition">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="#" target="_blank" class="text-yellow-600 hover:text-yellow-700 transition">
+                        <i class="fas fa-globe text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition duration-300">
+                <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-chart-line text-pink-600 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-1">LIKONGO Pretty</h3>
+                <p class="text-pink-600 mb-3">Trésorière, Comptable & Concepteur Web</p>
+                <p class="text-gray-600 text-sm mb-4">
+                    Gère les aspects financiers de l'entreprise tout en contribuant à la conception et à la mise en page de nos projets web.
+                </p>
+                <div class="flex justify-center space-x-3 mt-4">
+                    <a href="https://www.facebook.com/pretty.likongo" target="_blank" class="text-blue-600 hover:text-blue-700 transition">
+                        <i class="fab fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="https://wa.me/243856447219" target="_blank" class="text-green-500 hover:text-green-600 transition">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                    <a href="mailto:likongopretty@gmail.com" class="text-gray-600 hover:text-blue-600 transition">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                    <a href="#" target="_blank" class="text-blue-700 hover:text-blue-800 transition">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="#" target="_blank" class="text-yellow-600 hover:text-yellow-700 transition">
+                        <i class="fas fa-globe text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition duration-300">
+                <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-user-friends text-yellow-600 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-1">John BOTIMA</h3>
+                <p class="text-yellow-600 mb-3">Membre de l'Équipe (Support Technique)</p>
+                <p class="text-gray-600 text-sm mb-4">
+                    Soutient l'équipe fondatrice dans les tâches transversales et assure un support technique essentiel à la bonne marche des projets.
+                </p>
+                <div class="flex justify-center space-x-3 mt-4">
+                    <a href="#" target="_blank" class="text-blue-600 hover:text-blue-700 transition">
+                        <i class="fab fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="https://wa.me/243896204496" target="_blank" class="text-green-500 hover:text-green-600 transition">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                    <a href="mailto:botimajohn@gmail.com" class="text-gray-600 hover:text-blue-600 transition">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                    <a href="#" target="_blank" class="text-blue-700 hover:text-blue-800 transition">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="#" target="_blank" class="text-yellow-600 hover:text-yellow-700 transition">
+                        <i class="fas fa-globe text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à démarrer votre projet ?</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Ne laissez pas votre idée attendre. Contactez-nous dès aujourd'hui pour une consultation gratuite.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+               <a href="https://wa.me/243827612274" 
+   target="_blank" 
+   class="bg-green-500 text-white hover:bg-green-600 font-semibold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center justify-center shadow-lg">
+    <i class="fab fa-whatsapp mr-2 text-xl"></i>
+    Nous Contacter par WhatsApp
+</a>
+                <a href="#formulaire" class="bg-transparent border-2 border-white hover:bg-white hover:bg-opacity-10 font-semibold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Envoyer un message
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-laptop-code text-blue-500 text-2xl mr-2"></i>
+                        <span class="font-bold text-xl">PLMB Technologie</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Votre partenaire de confiance pour toutes vos solutions numériques et digitales.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Accueil</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">À propos</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-white transition duration-300">Projets</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Développement Web</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Applications Mobiles</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Solutions Cloud</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Cybersécurité</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Transformation Digitale</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-2"></i>
+                            <span class="text-gray-400">Ville de Kisangani INPP-Tshopo</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-blue-500 mr-2"></i>
+                            <span class="text-gray-400">+243827612274</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 mr-2"></i>
+                            <span class="text-gray-400">plmbtechnology@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 PLMB Technologie. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animation simple pour le formulaire
+        document.addEventListener('DOMContentLoaded', function() {
+            const formInputs = document.querySelectorAll('.form-input');
+            
+            formInputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.classList.add('transform', 'scale-105');
+                    this.parentElement.classList.add('transition', 'duration-300');
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.parentElement.classList.remove('transform', 'scale-105');
+                });
+            });
+            
+            // Simulation d'envoi de formulaire
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Animation de succès
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    const originalText = submitButton.innerHTML;
+                    
+                    submitButton.innerHTML = '<i class="fas fa-check mr-2"></i>Message envoyé !';
+                    submitButton.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                    submitButton.classList.add('bg-green-600');
+                    
+                    setTimeout(() => {
+                        submitButton.innerHTML = originalText;
+                        submitButton.classList.remove('bg-green-600');
+                        submitButton.classList.add('bg-blue-600', 'hover:bg-blue-700');
+                    }, 3000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

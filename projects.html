@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - PLMB Technologie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .project-filter button.active {
+            background-color: #3B82F6;
+            color: white;
+        }
+        .project-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px 12px 0 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+   <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <i class="fas fa-laptop-code text-blue-600 text-2xl mr-2"></i>
+                    <span class="font-bold text-xl text-gray-800">PLMB Technologie</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Accueil</a>
+                <a href="apropos.html" class="text-blue-600 font-medium border-b-2 border-blue-600 px-1">À propos</a>
+                <a href="services.html" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Services</a>
+                <a href="projects.html" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Projets</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Contact</a>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden pb-4 transition-all duration-300 ease-in-out">
+        <div class="space-y-1 px-2 pt-2 pb-3">
+            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-600">Accueil</a>
+            <a href="apropos.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-600">À propos</a>
+            <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-600">Services</a>
+            <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-blue-50">Projets</a>
+            <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-600">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.getElementById('menu-button').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+    <!-- Hero Section Projets -->
+    <section class="hero-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Nos Réalisations</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                Découvrez nos projets phares et solutions innovantes développées pour répondre aux besoins spécifiques de nos clients.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filtres de projets -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Filtrer par catégorie</h2>
+                <div class="project-filter flex flex-wrap justify-center gap-3">
+                    <button class="filter-btn active bg-blue-100 text-blue-600 hover:bg-blue-200 px-4 py-2 rounded-full font-medium transition duration-300" data-filter="all">
+                        Tous les projets
+                    </button>
+                    <button class="filter-btn bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-2 rounded-full font-medium transition duration-300" data-filter="gestion">
+                        Systèmes de Gestion
+                    </button>
+                    <button class="filter-btn bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-2 rounded-full font-medium transition duration-300" data-filter="web">
+                        Applications Web
+                    </button>
+                    <button class="filter-btn bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-2 rounded-full font-medium transition duration-300" data-filter="mobile">
+                        Applications Mobiles
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grille des projets -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Projet 1 - Gestion de présence -->
+                <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-category="gestion">
+                    <div class="project-image bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center">
+                        <i class="fas fa-user-clock text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">Système de Gestion de Présence</h3>
+                            <span class="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-1 rounded">Gestion</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Solution complète de gestion des présences et absences du personnel avec reporting avancé et intégration biométrique.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">PHP</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Laravel</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Vue.js</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">MySQL</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 font-semibold text-sm inline-flex items-center">
+                                Voir les détails
+                                <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 - Gestion scolaire -->
+                <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-category="gestion">
+                    <div class="project-image bg-gradient-to-r from-green-500 to-green-700 flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">Plateforme de Gestion Scolaire</h3>
+                            <span class="bg-green-100 text-green-600 text-xs font-semibold px-2 py-1 rounded">Gestion</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Système intégré de gestion des étudiants, enseignants, cours, emplois du temps et évaluations pour établissements scolaires.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Python</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Django</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">React</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">PostgreSQL</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 font-semibold text-sm inline-flex items-center">
+                                Voir les détails
+                                <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 - Gestion des inscriptions -->
+                <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-category="gestion web">
+                    <div class="project-image bg-gradient-to-r from-purple-500 to-purple-700 flex items-center justify-center">
+                        <i class="fas fa-user-graduate text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">Gestion des Inscriptions Universitaires</h3>
+                            <span class="bg-purple-100 text-purple-600 text-xs font-semibold px-2 py-1 rounded">Gestion</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Plateforme web d'inscription en ligne, gestion des dossiers étudiants et système de délibération automatisé.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Java</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Spring Boot</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Angular</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Oracle</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 font-semibold text-sm inline-flex items-center">
+                                Voir les détails
+                                <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 4 - Blog personnel -->
+                <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-category="web">
+                    <div class="project-image bg-gradient-to-r from-pink-500 to-pink-700 flex items-center justify-center">
+                        <i class="fas fa-blog text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">Plateforme de Blog Personnel</h3>
+                            <span class="bg-pink-100 text-pink-600 text-xs font-semibold px-2 py-1 rounded">Web</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            CMS moderne et intuitif pour la création et gestion de blogs personnels avec système de commentaires et partage social.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">JavaScript</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Node.js</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">MongoDB</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Express</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 font-semibold text-sm inline-flex items-center">
+                                Voir les détails
+                                <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 5 - Gestion hospitalière -->
+                <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-category="gestion web">
+                    <div class="project-image bg-gradient-to-r from-red-500 to-red-700 flex items-center justify-center">
+                        <i class="fas fa-hospital text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">Système de Gestion Hospitalière</h3>
+                            <span class="bg-red-100 text-red-600 text-xs font-semibold px-2 py-1 rounded">Gestion</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Solution complète pour la gestion des patients, rendez-vous, dossiers médicaux et inventaire pharmaceutique.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">C#</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">ASP.NET</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">SQL Server</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Blazor</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 font-semibold text-sm inline-flex items-center">
+                                Voir les détails
+                                <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 6 - Application mobile de gestion -->
+                <div class="project-item bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-category="mobile">
+                    <div class="project-image bg-gradient-to-r from-indigo-500 to-indigo-700 flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">App Mobile de Gestion</h3>
+                            <span class="bg-indigo-100 text-indigo-600 text-xs font-semibold px-2 py-1 rounded">Mobile</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Application mobile cross-platform pour la gestion des tâches, projets et collaboration d'équipe en temps réel.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">React Native</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Firebase</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Redux</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">REST API</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 font-semibold text-sm inline-flex items-center">
+                                Voir les détails
+                                <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-12 flex justify-center">
+                <nav class="flex items-center space-x-2">
+                    <a href="#" class="px-3 py-2 bg-blue-600 text-white rounded-lg font-medium">1</a>
+                    <a href="#" class="px-3 py-2 bg-white text-gray-600 hover:bg-gray-100 rounded-lg font-medium">2</a>
+                    <a href="#" class="px-3 py-2 bg-white text-gray-600 hover:bg-gray-100 rounded-lg font-medium">3</a>
+                    <a href="#" class="px-3 py-2 bg-white text-gray-600 hover:bg-gray-100 rounded-lg font-medium">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages clients -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Ce que disent nos clients</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Découvrez les retours d'expérience de nos clients satisfaits par nos solutions.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Témoignage 1 -->
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Coach ELie </h4>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Le système de gestion hospitalière développé par PLMB Technologie a révolutionné notre façon de travailler. Gain de temps considérable et réduction des erreurs."
+                    </p>
+                    <div class="mt-4 text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Témoignage 2 -->
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Coach Patou KINGA</h4>
+                            <p class="text-gray-600 text-sm">Proviseur de l'INPP</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "La plateforme de gestion scolaire a considérablement simplifié nos processus administratifs. Interface intuitive et support réactif."
+                    </p>
+                    <div class="mt-4 text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <!-- Témoignage 3 -->
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Formateur Francis ESOSI</h4>
+                            <p class="text-gray-600 text-sm">Formateur chargé de la digitale</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Le système de gestion de présence a résolu nos problèmes de suivi du personnel. Les rapports automatisés nous font gagner des heures de travail chaque semaine."
+                    </p>
+                    <div class="mt-4 text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Votre projet nous intéresse !</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Vous avez un projet similaire ou une idée innovante ? Discutons de la meilleure façon de le concrétiser ensemble.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="contact.html" class="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg transition duration-300">
+                    Discuter de mon projet
+                </a>
+                <a href="services.html" class="bg-transparent border-2 border-white hover:bg-white hover:bg-opacity-10 font-semibold py-3 px-8 rounded-lg transition duration-300">
+                    Voir nos services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-laptop-code text-blue-500 text-2xl mr-2"></i>
+                        <span class="font-bold text-xl">PLMB Technologie</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Votre partenaire de confiance pour toutes vos solutions numériques et digitales.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Accueil</a></li>
+                        <li><a href="apropos.html" class="text-gray-400 hover:text-white transition duration-300">À propos</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-white transition duration-300">Projets</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Développement Web</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Applications Mobiles</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Solutions Cloud</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Cybersécurité</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Transformation Digitale</a></li>
+                    </ul>
+                </div>
+
+                 <div>
+                    <h3 class="font-bold text-lg mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-2"></i>
+                            <span class="text-gray-400">Ville de Kisangani INPP-Tshopo</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-blue-500 mr-2"></i>
+                            <span class="text-gray-400">+243827612274</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 mr-2"></i>
+                            <span class="text-gray-400">plmbtechnology@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 PLMB Technologie. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filtrage des projets
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectItems = document.querySelectorAll('.project-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Retirer la classe active de tous les boutons
+                    filterButtons.forEach(btn => btn.classList.remove('active', 'bg-blue-100', 'text-blue-600'));
+                    filterButtons.forEach(btn => {
+                        if (!btn.classList.contains('active')) {
+                            btn.classList.add('bg-gray-100', 'text-gray-600');
+                        }
+                    });
+                    
+                    // Ajouter la classe active au bouton cliqué
+                    this.classList.add('active', 'bg-blue-100', 'text-blue-600');
+                    this.classList.remove('bg-gray-100', 'text-gray-600');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    projectItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category').includes(filterValue)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

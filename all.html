@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLMB Technologie - Solutions Numériques Innovantes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Ajout pour un défilement fluide vers les ancres */
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-laptop-code text-blue-600 text-2xl mr-2"></i>
+                        <span class="font-bold text-xl text-gray-800">PLMB Technologie</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#accueil" class="text-blue-600 font-medium border-b-2 border-blue-600 px-1">Accueil</a>
+                    <a href="#a-propos" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">À propos</a>
+                    <a href="#services" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Services</a>
+                    <a href="#projets" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Projets</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="accueil" class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+                        Solutions Numériques <span class="text-green-300">Innovantes</span> pour Votre Entreprise
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        PLMB Technologie vous accompagne dans votre transformation digitale avec des solutions sur mesure, performantes et évolutives.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#services" class="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-6 rounded-lg transition duration-300 text-center">
+                            Découvrir nos services
+                        </a>
+                        <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:bg-opacity-10 font-semibold py-3 px-6 rounded-lg transition duration-300 text-center">
+                            Nous contacter
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -top-4 -left-4 w-full h-full bg-blue-400 rounded-2xl"></div>
+                        <div class="relative bg-white p-6 rounded-2xl shadow-xl">
+                            <div class="flex space-x-4 mb-6">
+                                <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                                <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                                <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="h-4 bg-gray-200 rounded w-3/4"></div>
+                                <div class="h-4 bg-gray-200 rounded w-1/2"></div>
+                                <div class="h-4 bg-gray-200 rounded w-5/6"></div>
+                                <div class="h-4 bg-gray-200 rounded w-2/3"></div>
+                            </div>
+                            <div class="mt-6 flex space-x-2">
+                                <div class="h-10 bg-blue-100 rounded-lg w-1/3"></div>
+                                <div class="h-10 bg-blue-500 rounded-lg w-2/3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="a-propos" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Qui Sommes-Nous ?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Notre mission est de simplifier la complexité numérique et d'accélérer la croissance de nos clients grâce à une expertise technique de pointe et une approche centrée sur l'innovation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-center">
+                <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-200 card-hover">
+                    <i class="fas fa-eye text-blue-600 text-3xl mb-3"></i>
+                    <h3 class="font-bold text-xl mb-2">Notre Vision</h3>
+                    <p class="text-gray-600">Devenir le leader dans l'accompagnement à la transformation digitale pour les PME en Afrique et en Europe.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-200 card-hover">
+                    <i class="fas fa-bullseye text-green-600 text-3xl mb-3"></i>
+                    <h3 class="font-bold text-xl mb-2">Notre Mission</h3>
+                    <p class="text-gray-600">Fournir des solutions numériques sur mesure qui garantissent performance, sécurité et évolutivité.</p>
+                </div>
+                 <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-200 card-hover">
+                    <i class="fas fa-handshake text-purple-600 text-3xl mb-3"></i>
+                    <h3 class="font-bold text-xl mb-2">Nos Valeurs</h3>
+                    <p class="text-gray-600">Innovation, Intégrité, Excellence et Proximité avec le client.</p>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-800 text-center mb-8 mt-12">Notre Équipe Fondatrice (PLMB)</h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                    <div class="w-24 h-24 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl text-blue-600 font-bold">P</div>
+                    <h4 class="text-xl font-bold text-gray-800">Paul</h4>
+                    <p class="text-blue-600 font-medium">CEO & Architecte Cloud</p>
+                    <p class="text-sm text-gray-500 mt-2">Expert en déploiement d'infrastructures Cloud (AWS/Azure).</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                    <div class="w-24 h-24 bg-green-200 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl text-green-600 font-bold">L</div>
+                    <h4 class="text-xl font-bold text-gray-800">Louis</h4>
+                    <p class="text-green-600 font-medium">Directeur Technique (CTO)</p>
+                    <p class="text-sm text-gray-500 mt-2">Spécialiste en développement Full-Stack et applications mobiles.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                    <div class="w-24 h-24 bg-purple-200 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl text-purple-600 font-bold">M</div>
+                    <h4 class="text-xl font-bold text-gray-800">Marc</h4>
+                    <p class="text-purple-600 font-medium">Responsable Cybersécurité</p>
+                    <p class="text-sm text-gray-500 mt-2">Garant de la sécurité de nos solutions et de celles de nos clients.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                    <div class="w-24 h-24 bg-yellow-200 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl text-yellow-600 font-bold">B</div>
+                    <h4 class="text-xl font-bold text-gray-800">Benoit</h4>
+                    <p class="text-yellow-600 font-medium">Chef de Projet Digital</p>
+                    <p class="text-sm text-gray-500 mt-2">Assure la bonne gestion des projets et la satisfaction client.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nos Domaines d'Expertise</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Nous proposons une gamme complète de services pour répondre à tous vos besoins en matière de transformation digitale.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover border border-gray-100">
+                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Développement Web</h3>
+                    <p class="text-gray-600 mb-4">
+                        Création de sites web et applications sur mesure, performants et adaptés à tous les appareils.
+                    </p>
+                    <a href="#contact" class="text-blue-600 font-medium inline-flex items-center">
+                        En savoir plus
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover border border-gray-100">
+                    <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Applications Mobiles</h3>
+                    <p class="text-gray-600 mb-4">
+                        Conception d'applications iOS et Android intuitives qui améliorent l'expérience utilisateur.
+                    </p>
+                    <a href="#contact" class="text-blue-600 font-medium inline-flex items-center">
+                        En savoir plus
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover border border-gray-100">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-cloud text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Solutions Cloud</h3>
+                    <p class="text-gray-600 mb-4">
+                        Migration, déploiement et gestion de vos infrastructures cloud pour une flexibilité optimale.
+                    </p>
+                    <a href="#contact" class="text-blue-600 font-medium inline-flex items-center">
+                        En savoir plus
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover border border-gray-100">
+                    <div class="w-14 h-14 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Cybersécurité</h3>
+                    <p class="text-gray-600 mb-4">
+                        Protection de vos données et systèmes contre les menaces numériques avec des solutions avancées.
+                    </p>
+                    <a href="#contact" class="text-blue-600 font-medium inline-flex items-center">
+                        En savoir plus
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover border border-gray-100">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Transformation Digitale</h3>
+                    <p class="text-gray-600 mb-4">
+                        Accompagnement dans votre transformation digitale pour optimiser vos processus métier.
+                    </p>
+                    <a href="#contact" class="text-blue-600 font-medium inline-flex items-center">
+                        En savoir plus
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover border border-gray-100">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-headset text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Support & Maintenance</h3>
+                    <p class="text-gray-600 mb-4">
+                        Assistance technique et maintenance proactive pour garantir la performance de vos solutions.
+                    </p>
+                    <a href="#contact" class="text-blue-600 font-medium inline-flex items-center">
+                        En savoir plus
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nos Réalisations Clés</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Un aperçu de nos projets phares qui illustrent notre capacité à délivrer des solutions numériques concrètes et performantes.
+                </p>
+            </div>
+
+            <div class="space-y-12">
+                <div class="bg-white rounded-xl shadow-xl p-8 md:flex md:space-x-8 items-center border-l-4 border-blue-600 card-hover">
+                    <div class="md:w-1/3 mb-6 md:mb-0 text-center">
+                        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-user-check text-blue-600 text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">GESCODE</h3>
+                        <p class="text-sm text-gray-500">Logiciel de Gestion de Présence des Agents</p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-gray-700 mb-4">
+                            **GESCODE** est une solution complète pour la gestion du temps de travail. Il permet d'automatiser le pointage, le suivi des congés et des heures supplémentaires, offrant aux entreprises une vue claire et fiable sur la présence de leurs agents.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-sm font-medium">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">PHP</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">MySQL</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">HTML/CSS</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Système RH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-xl p-8 md:flex md:space-x-8 items-center border-l-4 border-green-600 card-hover">
+                    <div class="md:w-1/3 mb-6 md:mb-0 text-center">
+                        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-gavel text-green-600 text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Gestion de la Délibération</h3>
+                        <p class="text-sm text-gray-500">Plateforme de Prise de Décision</p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-gray-700 mb-4">
+                            Ce projet est une plateforme conçue pour numériser et sécuriser l'ensemble du cycle de **Gestion de la Délibération** (assemblées, conseils d'administration). Il assure la traçabilité des votes, l'archivage sécurisé et la publication conforme aux exigences légales.
+                        </p>
+                        <p class="text-gray-700">
+                            **Autres Projets Notables:** En complément, nous développons régulièrement des solutions de gestion de stock, des systèmes de billetterie et des plateformes B2B/B2C personnalisées.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2">150+</div>
+                    <div class="text-blue-200">Projets Réalisés</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">50+</div>
+                    <div class="text-blue-200">Clients Satisfaits</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">5+</div>
+                    <div class="text-blue-200">Années d'Expérience</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">24/7</div>
+                    <div class="text-blue-200">Support Client</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à transformer votre entreprise ?</h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Contactez-nous dès aujourd'hui pour discuter de vos projets et découvrir comment nos solutions peuvent propulser votre activité.
+            </p>
+            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center">
+                <i class="fas fa-paper-plane mr-2"></i>
+                Demander un devis
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-laptop-code text-blue-500 text-2xl mr-2"></i>
+                        <span class="font-bold text-xl">PLMB Technologie</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Votre partenaire de confiance pour toutes vos solutions numériques et digitales.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-400 hover:text-white transition duration-300">Accueil</a></li>
+                        <li><a href="#a-propos" class="text-gray-400 hover:text-white transition duration-300">À propos</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="#projets" class="text-gray-400 hover:text-white transition duration-300">Projets</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Développement Web</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Applications Mobiles</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Solutions Cloud</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Cybersécurité</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Transformation Digitale</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-2"></i>
+                            <span class="text-gray-400">123 Avenue de la Technologie, 75000 Paris</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-blue-500 mr-2"></i>
+                            <span class="text-gray-400">+33 1 23 45 67 89</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 mr-2"></i>
+                            <span class="text-gray-400">contact@plmb-technologie.fr</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 PLMB Technologie. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

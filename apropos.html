@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - PLMB Technologie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #3B82F6;
+        }
+        /* Style pour les cercles de l'équipe */
+        .team-photo {
+             background-size: cover;
+             background-position: center;
+             border: 4px solid #3B82F6; /* Bordure bleue pour les photos */
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <i class="fas fa-laptop-code text-blue-600 text-2xl mr-2"></i>
+                    <span class="font-bold text-xl text-gray-800">PLMB Technologie</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Accueil</a>
+                <a href="apropos.html" class="text-blue-600 font-medium border-b-2 border-blue-600 px-1">À propos</a>
+                <a href="services.html" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Services</a>
+                <a href="projects.html" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Projets</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600 font-medium transition duration-150">Contact</a>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden pb-4 transition-all duration-300 ease-in-out">
+        <div class="space-y-1 px-2 pt-2 pb-3">
+            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-600">Accueil</a>
+            <a href="apropos.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-blue-50">À propos</a>
+            <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-600">Services</a>
+            <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-600">Projets</a>
+            <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-600">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.getElementById('menu-button').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+    <section class="hero-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6">L'Histoire de PLMB Technologie</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                Notre engagement : Innover en 2025 avec une équipe de Techniciens Web passionnés et prêts à transformer vos idées.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:space-x-12">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6"><i class="fas fa-history text-blue-600 mr-3"></i>Notre Histoire</h2>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        Prévue pour 2025, <span class="text-blue-600 font-semibold">PLMB Technologie</span> est l'aboutissement de la vision de quatre Techniciens Web — Exaucé, Pretty, Tracy, et John — qui partagent l'ambition de créer des solutions numériques de haute qualité.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Notre phase de préparation est centrée sur le développement de nos compétences clés et l'établissement des fondations d'une entreprise axée sur la valeur durable pour nos futurs clients.
+                    </p>
+                    <p class="text-gray-600">
+                        Notre approche combine expertise technique approfondie et compréhension des enjeux business pour délivrer, dès notre lancement, des solutions qui créent de la valeur durable.
+                    </p>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-100 rounded-2xl p-8 relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-blue-500 rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-chart-line text-white text-3xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-800 mt-2 mb-6 text-center">Nos Indicateurs Clés (Phase de Lancement)</h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-600 mb-2">2025</div>
+                                <div class="text-gray-600">Année de Lancement</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-600 mb-2">4</div>
+                                <div class="text-gray-600">Techniciens Fondateurs</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-600 mb-2">5+</div>
+                                <div class="text-gray-600">Projets Pilotes en cours</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-600 mb-2">3</div>
+                                <div class="text-gray-600">Partenaires Initiaux</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4"><i class="fas fa-crosshairs text-blue-600 mr-2"></i>Notre Mission & Vision</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Nous croyons en un avenir où la technologie sert l'humain et accélère l'innovation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Notre Mission</h3>
+                    <p class="text-gray-600 mb-4">
+                        Accompagner les entreprises dans leur transformation digitale en proposant des solutions technologiques innovantes,
+                        performantes et adaptées à leurs besoins spécifiques.
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Développer des solutions sur mesure</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Optimiser les processus métier</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Accroître la productivité et l'efficacité</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-eye text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Notre Vision</h3>
+                    <p class="text-gray-600 mb-4">
+                        Devenir le partenaire de référence en solutions digitales pour les PME et grandes entreprises
+                        en France et à l'international.
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Innovation continue et veille technologique</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Expansion à l'international</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Développement de solutions IA et IoT</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="equipe" class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4"><i class="fas fa-handshake text-blue-600 mr-2"></i>L'Équipe Fondatrice PLMB Technologie</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Nos techniciens co-fondateurs, combinant expertise technique et leadership pour garantir l'excellence de vos projets.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 max-w-5xl mx-auto">
+            
+            <div class="bg-white rounded-xl shadow-lg text-center card-hover hover:shadow-2xl transition duration-300 overflow-hidden">
+                <div class="w-full h-64 bg-blue-100 overflow-hidden">
+                    <img src="images/exauce.jpg" alt="Photo de PATOMA Exaucé" class="object-cover w-full h-full">
+                </div>
+                
+                <div class="p-6">
+                    <h4 class="text-xl font-extrabold text-gray-800">PATOMA Exaucé</h4>
+                    <p class="text-blue-600 font-bold mb-1">Président</p>
+                    <p class="text-md text-gray-600 mb-3">Spécialiste Développement Mobile & UX/UI</p>
+                    
+                    <p class="text-sm text-gray-500 mb-4">
+                        Dirige l'entreprise. Maître dans l'art de l'intégration, il conçoit des interfaces utilisateur intuitives et esthétiques pour une expérience optimale.
+                    </p>
+                    
+                    <div class="flex justify-center space-x-4 mt-4 border-t pt-4">
+                        <a href="#" target="_blank" class="text-blue-600 hover:text-blue-700 transition" aria-label="Facebook de PATOMA Exaucé">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="https://wa.me/243827612274" target="_blank" class="text-green-500 hover:text-green-600 transition" aria-label="WhatsApp de PATOMA Exaucé">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </a>
+                        <a href="mailto:exaucepatoma4@gmail.com" class="text-gray-600 hover:text-blue-600 transition" aria-label="Email de PATOMA Exaucé">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </a>
+                        <a href="#" target="_blank" class="text-blue-700 hover:text-blue-800 transition" aria-label="LinkedIn de PATOMA Exaucé">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" target="_blank" class="text-yellow-600 hover:text-yellow-700 transition" aria-label="Blog personnel de PATOMA Exaucé">
+                            <i class="fas fa-globe text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg text-center card-hover hover:shadow-2xl transition duration-300 overflow-hidden">
+                <div class="w-full h-64 bg-green-100 overflow-hidden">
+                    <img src="images/travis.jpg" alt="Photo de MULENGA Tracy" class="object-cover w-full h-full">
+                </div>
+
+                <div class="p-6">
+                    <h4 class="text-xl font-extrabold text-gray-800">MULENGA Tracy</h4>
+                    <p class="text-green-600 font-bold mb-1">Vice-Président</p>
+                    <p class="text-md text-gray-600 mb-3">Spécialiste Développement Fullstack</p>
+                    
+                    <p class="text-sm text-gray-500 mb-4">
+                        Responsable de la stratégie technique. Expert en Fullstack, il garantit la compatibilité et la fluidité parfaites sur tous les supports (Responsive Design).
+                    </p>
+
+                    <div class="flex justify-center space-x-4 mt-4 border-t pt-4">
+                        <a href="#" target="_blank" class="text-blue-600 hover:text-blue-700 transition" aria-label="Facebook de MULENGA Tracy">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="https://wa.me/243844202387" target="_blank" class="text-green-500 hover:text-green-600 transition" aria-label="WhatsApp de MULENGA Tracy">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </a>
+                        <a href="mailto:travismulenga131@gmail.com" class="text-gray-600 hover:text-blue-600 transition" aria-label="Email de MULENGA Tracy">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </a>
+                        <a href="#" target="_blank" class="text-blue-700 hover:text-blue-800 transition" aria-label="LinkedIn de MULENGA Tracy">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" target="_blank" class="text-yellow-600 hover:text-yellow-700 transition" aria-label="Blog personnel de MULENGA Tracy">
+                            <i class="fas fa-globe text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg text-center card-hover hover:shadow-2xl transition duration-300 overflow-hidden">
+                <div class="w-full h-64 bg-pink-100 overflow-hidden">
+                    <img src="images/pretty.jpg" alt="Photo de LIKONGO Pretty" class="object-cover w-full h-full">
+                </div>
+
+                <div class="p-6">
+                    <h4 class="text-xl font-extrabold text-gray-800">LIKONGO Pretty</h4>
+                    <p class="text-pink-600 font-bold mb-1">Trésorière, Comptable</p>
+                    <p class="text-md text-gray-600 mb-3">Spécialiste Back-end & Conception Web</p>
+
+                    <p class="text-sm text-gray-500 mb-4">
+                        Gère les finances de l'entreprise. Experte en architecture serveur et bases de données, elle assure la robustesse des systèmes.
+                    </p>
+
+                    <div class="flex justify-center space-x-4 mt-4 border-t pt-4">
+                        <a href="#" target="_blank" class="text-blue-600 hover:text-blue-700 transition" aria-label="Facebook de LIKONGO Pretty">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="https://wa.me/243856447219" target="_blank" class="text-green-500 hover:text-green-600 transition" aria-label="WhatsApp de LIKONGO Pretty">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </a>
+                        <a href="mailto:likongopretty@gmail.com" class="text-gray-600 hover:text-blue-600 transition" aria-label="Email de LIKONGO Pretty">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </a>
+                        <a href="#" target="_blank" class="text-blue-700 hover:text-blue-800 transition" aria-label="LinkedIn de LIKONGO Pretty">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" target="_blank" class="text-yellow-600 hover:text-yellow-700 transition" aria-label="Blog personnel de LIKONGO Pretty">
+                            <i class="fas fa-globe text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg text-center card-hover hover:shadow-2xl transition duration-300 overflow-hidden">
+                <div class="w-full h-64 bg-yellow-100 overflow-hidden">
+                    <img src="images/john.jpg" alt="Photo de John BOTIMA" class="object-cover w-full h-full">
+                </div>
+
+                <div class="p-6">
+                    <h4 class="text-xl font-extrabold text-gray-800">John BOTIMA</h4>
+                    <p class="text-yellow-600 font-bold mb-1">Membre de l'Équipe</p>
+                    <p class="text-md text-gray-600 mb-3">Spécialiste DevOps & Sécurité Web</p>
+                    
+                    <p class="text-sm text-gray-500 mb-4">
+                        Assure le déploiement continu, la performance du serveur et la protection proactive contre les menaces pour une plateforme toujours stable et sécurisée.
+                    </p>
+
+                    <div class="flex justify-center space-x-4 mt-4 border-t pt-4">
+                        <a href="#" target="_blank" class="text-blue-600 hover:text-blue-700 transition" aria-label="Facebook de John BOTIMA">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="https://wa.me/243896204496" target="_blank" class="text-green-500 hover:text-green-600 transition" aria-label="WhatsApp de John BOTIMA">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </a>
+                        <a href="mailto:botimajohn@gmail.com" class="text-gray-600 hover:text-blue-600 transition" aria-label="Email de John BOTIMA">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </a>
+                        <a href="#" target="_blank" class="text-blue-700 hover:text-blue-800 transition" aria-label="LinkedIn de John BOTIMA">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" target="_blank" class="text-yellow-600 hover:text-yellow-700 transition" aria-label="Blog personnel de John BOTIMA">
+                            <i class="fas fa-globe text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4"><i class="fas fa-road text-blue-600 mr-2"></i>Notre Parcours (Roadmap)</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Les étapes clés menant à notre lancement officiel en 2025 et notre vision à long terme.
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="relative">
+                    <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-blue-200 transform -translate-x-1/2"></div>
+                    
+                    <div class="relative mb-12 timeline-item">
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                                <h3 class="text-xl font-bold text-gray-800">2024</h3>
+                                <p class="text-lg text-blue-600">Phase de Conception & Préparation</p>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12">
+                                <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                                    <p class="text-gray-600">
+                                        Finalisation des plans d'affaires, définition de la structure légale et développement des premiers prototypes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative mb-12 timeline-item">
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0 order-2">
+                                <h3 class="text-xl font-bold text-gray-800">2025 Q1</h3>
+                                <p class="text-lg text-blue-600">Lancement Officiel de PLMB Technologie</p>
+                            </div>
+                            <div class="md:w-1/2 md:pr-12 order-1">
+                                <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                                    <p class="text-gray-600">
+                                        Ouverture des services aux premiers clients, focus sur les projets pilotes et établissement de notre marque.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative mb-12 timeline-item">
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                                <h3 class="text-xl font-bold text-gray-800">2026</h3>
+                                <p class="text-lg text-blue-600">Stabilisation et Croissance des Offres</p>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12">
+                                <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                                    <p class="text-gray-600">
+                                        Établissement de partenariats techniques majeurs et lancement de la première vague de recrutement pour élargir l'équipe.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative timeline-item">
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0 order-2">
+                                <h3 class="text-xl font-bold text-gray-800">2027+</h3>
+                                <p class="text-lg text-blue-600">Expansion Internationale et Innovation</p>
+                            </div>
+                            <div class="md:w-1/2 md:pr-12 order-1">
+                                <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                                    <p class="text-gray-600">
+                                        Développement de solutions basées sur l'IA et l'IoT, et expansion de nos services sur de nouveaux marchés à l'international.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à collaborer avec nous ?</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Contactez notre équipe de fondateurs pour discuter de votre projet digital.
+            </p>
+            <a href="contact.html" class="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center">
+                <i class="fas fa-envelope mr-2"></i>
+                Nous contacter
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-laptop-code text-blue-500 text-2xl mr-2"></i>
+                        <span class="font-bold text-xl">PLMB Technologie</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Votre futur partenaire de confiance pour toutes vos solutions numériques et digitales.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Accueil</a></li>
+                        <li><a href="apropos.html" class="text-gray-400 hover:text-white transition duration-300">À propos</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-white transition duration-300">Projets</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Développement Web</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Applications Mobiles</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Solutions Cloud</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Cybersécurité</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Transformation Digitale</a></li>
+                    </ul>
+                </div>
+
+                 <div>
+                    <h3 class="font-bold text-lg mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-2"></i>
+                            <span class="text-gray-400">Ville de Kisangani INPP-Tshopo</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-blue-500 mr-2"></i>
+                            <span class="text-gray-400">+243827612274</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 mr-2"></i>
+                            <span class="text-gray-400">plmbtechnology@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 PLMB Technologie. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
